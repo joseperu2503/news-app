@@ -10,11 +10,8 @@ export default function Home() {
 
   const router = useRouter()
   const [articles, setArticles] = useState<Article[]>([])
-  const [searchValue, setSearchValue] = useState('tesla')    
-  useEffect(() => {
-    getArticles()
-  }, [searchValue])
-
+  const [searchValue, setSearchValue] = useState('tesla')  
+  
   const getArticles = async () => {
     if(searchValue != ''){
       await axios.get<ReqResListado>('https://newsapi.org/v2/everything',{
@@ -32,6 +29,12 @@ export default function Home() {
       })
     }
   }
+  
+  useEffect(() => {
+    getArticles()
+  }, [searchValue])
+
+  
 
   return (
     <PageLayout title='Home'>
