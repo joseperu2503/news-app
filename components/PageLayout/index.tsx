@@ -7,7 +7,7 @@ type Props = {
     children: React.ReactNode
 };
 
-function PageLayout({title, children} : Props) {
+const PageLayout = ({title, children} : Props) => {
   return (
     <>
         <Head>

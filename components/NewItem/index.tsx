@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Article } from '../../interfaces'
@@ -6,10 +7,12 @@ const NewItem = ({article}: {article: Article}) => {
     return (
         <article className='rounded-lg border border-slate-200 shadow-md flex flex-col justify-between'>
             <div>
-                <img
+                <Image
                     src={article.urlToImage?article.urlToImage:''}
                     alt={`image`}
                     className='rounded-t-lg'
+                    width={350}
+                    height={350}
                 />
                 <div className='p-3 '>
                     <h2 className='font-semibold text-lg leading-tight'>{article.title}</h2>

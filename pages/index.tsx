@@ -10,7 +10,7 @@ export default function Home() {
 
   const router = useRouter()
   const [articles, setArticles] = useState<Article[]>([])
-  const [searchValue, setSearchValue] = useState('')    
+  const [searchValue, setSearchValue] = useState('tesla')    
   useEffect(() => {
     getArticles()
   }, [searchValue])
@@ -27,6 +27,8 @@ export default function Home() {
       })
       .then(response => {
         setArticles(response.data.articles)
+      }).catch(error => {
+        setArticles([])
       })
     }
   }
