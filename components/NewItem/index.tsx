@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { Article } from '../../interfaces'
+import { Article } from '@/interfaces'
 
 const NewItem = ({article}: {article: Article}) => {
     return (

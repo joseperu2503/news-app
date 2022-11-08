@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import PageLayout from '../components/PageLayout'
+import PageLayout from '@/components/PageLayout'
 import axios from 'axios'
-import NewItem from '../components/NewItem'
-import Searcher from '../components/Searcher'
-import { Article, ReqResListado } from '../interfaces'
+import NewItem from '@/components/NewItem'
+import Searcher from '@/components/Searcher'
+import { Article, ReqResListado } from '@/interfaces'
 
 export default function Home() {
 
