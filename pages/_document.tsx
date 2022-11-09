@@ -9,9 +9,9 @@ export default function Document() {
         <script src="https://kit.fontawesome.com/191a957bb7.js" crossOrigin ="anonymous" async></script>
       </Head>
 
-      <body>
+      <body className='fixed top-0 bottom-0 right-0 left-0'>
         <Main />
-        <NextScript />
+        <NextScript/>
       </body>
     </Html>
   )

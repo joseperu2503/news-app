@@ -29,9 +29,14 @@ export default function Home() {
       })
     }
   }
-  
+
   useEffect(() => {
-    getArticles()
+    // getArticles()
+    // (async () => {
+    //   const session = await getSession()
+    //   console.log(session)
+    // })()
+    
   }, [searchValue])
 
   
